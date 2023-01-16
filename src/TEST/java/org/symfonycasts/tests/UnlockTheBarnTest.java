@@ -5,11 +5,11 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.symfonycasts.pojo.responses.ErrorResponses;
-import org.symfonycasts.pojo.responses.unlockBarnResponse;
+import org.symfonycasts.pojo.responses.SuccessResponse;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class UnlockTheBarn extends BaseTest {
+public class UnlockTheBarnTest extends BaseTest {
 
   @Test
   public void unlockTheBarnPositiveTest() {
@@ -18,9 +18,11 @@ public class UnlockTheBarn extends BaseTest {
     request.auth().oauth2(accessToken);
     Response response = request.post("/barn-unlock");
     ResponseBody body = response.getBody();
-    unlockBarnResponse unlockTheBarn = body.as(unlockBarnResponse.class);
-    Assert.assertEquals(unlockTheBarn.getAction(), "barn-unlock");
-    Assert.assertNull(unlockTheBarn.getData());
+    SuccessResponse successResponse = body.as(SuccessResponse.class);
+    Assert.assertEquals(successResponse.getAction(), "barn-unlock");
+    Assert.assertNull(successResponse.getData());
+//    Assert.assertEquals(successResponse.getMessage(), "The barn is already wide open! Let's throw a party!");
+
 
   }
 

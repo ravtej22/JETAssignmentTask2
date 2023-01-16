@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94aff2cc-498e-4676-a8ba-25cedf455028" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/requests/TokenRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/responses/ErrorResponses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/responses/TokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/responses/unlockBarnResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/TokenTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/UnlockTheBarn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/utils/PropertyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/utils/RestAssuredUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/utils/TestUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TEST/resources/configs/configs.properties" afterDir="false" />
+    <list default="true" id="94aff2cc-498e-4676-a8ba-25cedf455028" name="Changes" comment="First Commit">
+      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/chickensFeedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/toiletSeatDownTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/responses/unlockBarnResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/pojo/responses/SuccessResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/UnlockTheBarn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEST/java/org/symfonycasts/tests/UnlockTheBarnTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +69,8 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.UnlockTheBarn">
-    <configuration name="TokenTest.getAccessToken" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.chickensFeedTest.chickensFeedPositiveTest">
+    <configuration name="UnlockTheBarnTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JETAssignmentTask2" />
       <extension name="coverage">
         <pattern>
@@ -93,25 +79,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.TokenTest" />
-      <option name="METHOD_NAME" value="getAccessToken" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnlockTheBarn" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JETAssignmentTask2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.symfonycasts.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.UnlockTheBarn" />
+      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.UnlockTheBarnTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -119,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnlockTheBarn.UnlockThebarnTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="chickensFeedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JETAssignmentTask2" />
       <extension name="coverage">
         <pattern>
@@ -128,8 +96,60 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.UnlockTheBarn" />
-      <option name="METHOD_NAME" value="UnlockThebarnTest" />
+      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.chickensFeedTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chickensFeedTest.chickensFeedPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JETAssignmentTask2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.symfonycasts.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.chickensFeedTest" />
+      <option name="METHOD_NAME" value="chickensFeedPositiveTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="toiletSeatDownTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JETAssignmentTask2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.symfonycasts.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.toiletSeatDownTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="toiletSeatDownTest.toiletSeatDownPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JETAssignmentTask2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.symfonycasts.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.symfonycasts.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.symfonycasts.tests.toiletSeatDownTest" />
+      <option name="METHOD_NAME" value="toiletSeatDownPositiveTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -139,9 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UnlockTheBarn" />
-        <item itemvalue="TestNG.UnlockTheBarn.UnlockThebarnTest" />
-        <item itemvalue="TestNG.TokenTest.getAccessToken" />
+        <item itemvalue="TestNG.chickensFeedTest.chickensFeedPositiveTest" />
+        <item itemvalue="TestNG.chickensFeedTest" />
+        <item itemvalue="TestNG.UnlockTheBarnTest" />
+        <item itemvalue="TestNG.toiletSeatDownTest" />
+        <item itemvalue="TestNG.toiletSeatDownTest.toiletSeatDownPositiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -153,8 +175,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673800264587</updated>
-      <workItem from="1673800265934" duration="9721000" />
+      <workItem from="1673800265934" duration="14181000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1673810113252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673810113252</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +200,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

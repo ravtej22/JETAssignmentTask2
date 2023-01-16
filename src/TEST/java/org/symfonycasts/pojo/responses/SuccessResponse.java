@@ -10,7 +10,7 @@ import lombok.extern.jackson.Jacksonized;
 @Value
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class unlockBarnResponse {
+public class SuccessResponse {
 
   @JsonProperty("action")
   String action;
