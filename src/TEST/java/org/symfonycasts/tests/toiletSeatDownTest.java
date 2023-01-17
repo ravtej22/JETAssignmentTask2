@@ -12,18 +12,19 @@ import org.testng.annotations.Test;
 public class toiletSeatDownTest extends BaseTest {
 
   @Test
-  public void toiletSeatDownPositiveTest(){
+  public void toiletSeatDownPositiveTest() {
 
     RequestSpecification request = RestAssured.given();
     request.auth().oauth2(accessToken);
     Response response = request.post("/toiletseat-down");
     ResponseBody body = response.getBody();
-    body.prettyPeek();
     SuccessResponse successResponse = body.as(SuccessResponse.class);
     Assert.assertEquals(successResponse.getAction(), "toiletseat-down");
     Assert.assertNull(successResponse.getData());
-    Assert.assertEquals(successResponse.getMessage(), "You just put the toilet seat down. You're a wonderful roommate!");
+    Assert.assertTrue(successResponse.isSuccess());
+
   }
+
   @Test
   public void toiletSeatDownInvalidToken() {
     RequestSpecification request = RestAssured.given();

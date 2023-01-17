@@ -21,7 +21,7 @@ public class chickensFeedTest extends BaseTest{
     SuccessResponse successResponse = body.as(SuccessResponse.class);
     Assert.assertEquals(successResponse.getAction(), "chickens-feed");
     Assert.assertNull(successResponse.getData());
-//    Assert.assertEquals(successResponse.getMessage(), "Your chickens are now full and happy");
+    Assert.assertTrue(successResponse.isSuccess());
 
 
   }

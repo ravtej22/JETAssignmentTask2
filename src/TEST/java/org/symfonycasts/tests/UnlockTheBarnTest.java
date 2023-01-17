@@ -21,8 +21,7 @@ public class UnlockTheBarnTest extends BaseTest {
     SuccessResponse successResponse = body.as(SuccessResponse.class);
     Assert.assertEquals(successResponse.getAction(), "barn-unlock");
     Assert.assertNull(successResponse.getData());
-//    Assert.assertEquals(successResponse.getMessage(), "The barn is already wide open! Let's throw a party!");
-
+    Assert.assertTrue(successResponse.isSuccess());
 
   }
 
@@ -33,7 +32,17 @@ public class UnlockTheBarnTest extends BaseTest {
     Response response = request.post("/barn-unlock");
     ResponseBody body = response.getBody();
     ErrorResponses errorResponses = body.as(ErrorResponses.class);
-    Assert.assertEquals(errorResponses.getError(), "invalid_token");
+    Assert.assertEquals(errorResponses.getError(), "invalid_token", "");
     Assert.assertEquals(errorResponses.getErrorDescription(), "The access token provided is invalid");
   }
+
+  @Test(description = "")
+  public void unlockTheBarnInvalidMethodType() {
+    RequestSpecification request = RestAssured.given();
+    request.auth().oauth2(accessToken);
+    Response response = request.get("/barn-unlock");
+    int responseStatusCode = response.getStatusCode();
+    Assert.assertEquals(responseStatusCode, 405);
+  }
+
 }

@@ -1,28 +1,16 @@
 package org.symfonycasts.utils;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.symfonycasts.pojo.requests.TokenRequest;
 import org.symfonycasts.pojo.responses.TokenResponse;
-import org.testng.Assert;
 
 public class TestUtil {
-  //Verify the http response status returned. Check Status Code is 200?
-  public void checkStatusIs200(Response res) {
-    Assert.assertEquals(res.getStatusCode(), 200, "Status Check Failed!");
-  }
-
-  //Get Clients
-  public <T> ArrayList<T> getClients(JsonPath jp) {
-    return jp.get();
-  }
 
   public String getAccessToken() {
 
@@ -36,4 +24,6 @@ public class TestUtil {
     TokenResponse responseBody = body.as(TokenResponse.class);
     return responseBody.getAccessToken();
   }
+
+
 }
