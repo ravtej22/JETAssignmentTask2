@@ -10,26 +10,26 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 
 
-  //Instantiate a Helper Test Methods (testUtils) Object
   TestUtil testUtil = new TestUtil();
   public static String accessToken;
 
-
+  /**
+   * Setup Method to set BASE URL and access Token
+   */
   @BeforeSuite
   public void setup() {
-    //Test Setup
     RestAssuredUtil.setBaseURI();
-    //Setup Base URI
     accessToken =testUtil.getAccessToken();
     RestAssuredUtil.setContentType(ContentType.JSON); //Setup Content Type
     RestAssuredUtil.setBasePath("api/" + PropertyUtils.userID); //Setup Base Path
   }
 
 
-
+  /**
+   * After Test Setup to reset Base Path
+   */
   @AfterSuite
   public void afterTest() {
-    //Reset Values
     RestAssuredUtil.resetBaseURI();
     RestAssuredUtil.resetBasePath();
   }
