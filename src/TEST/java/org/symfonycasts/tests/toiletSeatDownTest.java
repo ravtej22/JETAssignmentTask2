@@ -45,7 +45,6 @@ public class toiletSeatDownTest extends BaseTest {
     RequestSpecification request = RestAssured.given();
     request.auth().oauth2(accessToken);
     Response response = request.get("/toiletseat-down");
-    Log.info("Response: "+response.prettyPrint());
     int responseStatusCode = response.getStatusCode();
     Assert.assertEquals(responseStatusCode, 405);
   }

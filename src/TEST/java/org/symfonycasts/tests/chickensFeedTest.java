@@ -47,7 +47,6 @@ public class chickensFeedTest extends BaseTest {
     RequestSpecification request = RestAssured.given();
     request.auth().oauth2(accessToken);
     Response response = request.get("/chickens-feed");
-    Log.info("Response: "+response.prettyPrint());
     int responseStatusCode = response.getStatusCode();
     Assert.assertEquals(responseStatusCode, 405);
   }
